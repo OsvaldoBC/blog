@@ -16,7 +16,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'coments_counter should be integer' do
-    subject.comments_counter = '10'
+    subject.comments_counter = '10.5'
     expect(subject).to_not be_valid
   end
 
@@ -26,7 +26,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'likes_counter should be integer' do
-    subject.likes_counter = '10'
+    subject.likes_counter = '10.2'
     expect(subject).to_not be_valid
   end
 

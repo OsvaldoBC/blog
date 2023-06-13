@@ -19,19 +19,19 @@ RSpec.describe UsersController, type: :request do
   end
 
   describe 'GET #show' do
-  it 'returns a successful response' do
-    get '/users/1'
-    expect(response).to be_successful
-  end
+    it 'returns a successful response' do
+      get '/users/1'
+      expect(response).to be_successful
+    end
 
-  it 'renders the show template' do
-    get '/users/1'
-    expect(response).to render_template('show')
-  end
+    it 'renders the show template' do
+      get '/users/1'
+      expect(response).to render_template('show')
+    end
 
-  it 'includes the correct placeholder text in the response body' do
-    get '/users/1'
-    expect(response.body).to include(' here go the detail of specific user')
+    it 'includes the correct placeholder text in the response body' do
+      get '/users/1'
+      expect(response.body).to include(' here go the detail of specific user')
+    end
   end
-end 
 end

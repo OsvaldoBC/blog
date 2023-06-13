@@ -22,19 +22,19 @@ RSpec.describe PostsController, type: :request do
   end
 
   describe 'GET #show' do
-  it 'returns a successful response' do
-    get "/users/#{user.id}/posts/#{post.id}"
-    expect(response).to be_successful
-  end
+    it 'returns a successful response' do
+      get "/users/#{user.id}/posts/#{post.id}"
+      expect(response).to be_successful
+    end
 
-  it 'renders the show template' do
-    get "/users/#{user.id}/posts/#{post.id}"
-    expect(response).to render_template('show')
-  end
+    it 'renders the show template' do
+      get "/users/#{user.id}/posts/#{post.id}"
+      expect(response).to render_template('show')
+    end
 
-  it 'includes the correct placeholder text in the response body' do
-    get "/users/#{user.id}/posts/#{post.id}"
-    expect(response.body).to include(' here go the detail of specific post')
+    it 'includes the correct placeholder text in the response body' do
+      get "/users/#{user.id}/posts/#{post.id}"
+      expect(response.body).to include(' here go the detail of specific post')
+    end
   end
-end
 end

@@ -1,5 +1,4 @@
 <h1>Here is a list of all users </h1>
-
 <% @users.each do |user| %>
     <%= link_to user_path(user.id) do %>
         <h2> <%= user.name %>  </h2>

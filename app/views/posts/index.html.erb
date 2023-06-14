@@ -1,1 +1,9 @@
 <h2> here go the list of posts </h2>
+
+<% @posts.each do |post| %>
+    <%= link_to user_posts_path(post) do %>
+        <h2> <%= post.title %>  </h2>
+        <h2> <%= post.text %>  </h2>
+
+    <% end %>
+ <% end %>

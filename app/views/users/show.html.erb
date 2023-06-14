@@ -1,8 +1,30 @@
 <h1> here go the detail of specific user </h1>
 
-    <h2> <%= @user.name %> </h2>
-    <P> User ID:  <%= @user.id %></P>
-    <p>Number of Posts: <%= @user.posts_counter%> </p>
-    <p> Bio: <%= @user.bio%> </P>
+
+<div class='user'>
+
+    <div class="user-image">
+        <img src="<%= @user.photo %>" alt="user-image">
+    </div>
+
+    <div class='user_detail'> 
+        <h2> <%= @user.name %> </h2>
+        <P> User ID:  <%= @user.id %></P>
+        <p>Number of Posts: <%= @user.posts_counter%> </p>
+    </div>    
+
+    <div class="bio">
+        <p> Bio: <%= @user.bio%> </P>      
+    </div>  
+
+    <div class="posts">
+  <h2>Recent Posts</h2>
+  <% @user.recent_posts.each do |post| %>
+    <div class="post">
+        <p class="post-title"><%= post.title %></p>
+        <p class="post-text"><%= post.text %></p>
+    </div>
+  <% end %>
+</div>
 
    

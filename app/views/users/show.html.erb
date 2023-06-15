@@ -1,18 +1,4 @@
-<h1> here go the detail of specific user </h1>
-
-
-<div class='user'>
-
-    <div class="user-image">
-        <img src="<%= @user.photo %>" alt="user-image">
-    </div>
-
-    <div class='user_detail'> 
-        <h2> <%= @user.name %> </h2>
-        <P> User ID:  <%= @user.id %></P>
-        <p>Number of Posts: <%= @user.posts_counter%> </p>
-    </div>    
-
+<%= render 'shared/user', user: @user %>
     <div class="bio">
         <p> Bio: <%= @user.bio%> </P>      
     </div>  

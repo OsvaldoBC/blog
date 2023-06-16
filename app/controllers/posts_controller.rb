@@ -8,8 +8,17 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
   end
-  
+
+ 
   def new
-    @post = Post.new
+    post = Post.new
+    respond_to do |format|
+      format.html { render :new, locals: { post: } }
+    end
   end
+
+  def create 
+  
+  end
+
 end

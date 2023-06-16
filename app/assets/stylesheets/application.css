@@ -139,3 +139,16 @@
     padding: 10px;
     margin-bottom: 10px;
    }
+
+   .btn {
+      margin-top: 1em;
+      width: 12em;
+      height: 3em;
+      font-size: initial;
+    }
+    
+    .users-header {
+      display: flex;
+      justify-content: space-between;
+    }
+    

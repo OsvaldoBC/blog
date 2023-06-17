@@ -1,5 +1,6 @@
+<h2> Add a new post</h2>
 <div class="new-post">
-<%= form_with model: post, url: create_post_path, method: post, scope: post do |form| %>
+<%= form_with model: @post,  url: new_post_path do |form| %>
     <div>
       <%= form.label :title %>
       <%= form.text_field :title %>
@@ -8,6 +9,6 @@
       <%= form.label :text %>
       <%= form.text_area :text %>
     </div>
-    <%= form.submit "Post!" %>
+    <%= form.submit "Save" %>
   <% end %>
 </div>

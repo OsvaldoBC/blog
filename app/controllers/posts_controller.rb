@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts
@@ -11,27 +12,24 @@ class PostsController < ApplicationController
 
  
   def new
-    post = Post.new
-    respond_to do |format|
-      format.html { render :new, locals: { post: } }
-    end
+    @post = Post.new
+   end
+
+   def create
+    @post = Post.new(post_params)
+    @post.author_id = current_user.id
+    @post.comments_counter = 0
+    @post.likes_counter = 0
+    if @post.save
+      redirect_to users_path
+    else
+      render :new
+   end
   end
 
-  def create
-    user = current_user
-    post = Post.new(params.require(:post).permit(:title, :text, author_id: user.id))
-    post.author_id = user.id
-    respond_to do |format|
-      format.html do
-        if post.save
-          flash[:notice] = 'Post saved successfully'
-          redirect_to users_path
-        else
-          flash.now[:error] = 'Error: Post could not be saved'
-          render :new, locals: { post: }, status: 422
-        end
-      end
-    end
-  end
+   private
 
+   def post_params
+    params.required(:post).permit(:title, :text)
+  end
 end

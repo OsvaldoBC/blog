@@ -73,4 +73,6 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'capybara'
+  gem 'selenium-webdriver' # Opcional, si quieres utilizar el driver de Selenium
 end

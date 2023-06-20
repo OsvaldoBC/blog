@@ -3,7 +3,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Rails Blog ](#-blog-)
+- [📖 Blog ](#-blog-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -113,6 +113,13 @@ Coming soon...
 - Twitter : [@OsvaldoBarrio20](https://twitter.com/OsvaldoBarrio20)
 - GitHub :  [@OsvaldoBC](https://github.com/OsvaldoBC)
 - LinkedIn: [osvaldo-barrios-data-science](https://linkedin.com/in/osvaldo-barrios-data-science)
+
+
+👤 **Luis Sanchez**
+
+- Github: [GitHub](https://github.com/sanieni6/)
+- Twitter: [Twitter](https://twitter.com/its_luis_sz23)
+- Linkedin:  [LinkedIn](https://www.linkedin.com/in/luissanchezz3/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -10,7 +10,7 @@ RSpec.describe 'Post show page', type: :feature do
     )
 
     @user2 = User.create(
-      name: 'Christopher',
+      name: 'Daniel',
       bio: 'FullStack Dev',
       photo: 'https://unsplash.com/photos/hodKTZow_Kk',
       posts_counter: 3
@@ -72,6 +72,4 @@ RSpec.describe 'Post show page', type: :feature do
       expect(page).to have_content('First Comment')
     end
   end
-
-
 end

@@ -9,7 +9,6 @@ class IndexTest < ActionDispatch::IntegrationTest
   end
 
   test 'index test' do
-   
     visit user_path(user)
 
     click_button 'Create a new Post'
@@ -22,4 +21,3 @@ class IndexTest < ActionDispatch::IntegrationTest
     assert_equal new_post_path, current_path
   end
 end
-

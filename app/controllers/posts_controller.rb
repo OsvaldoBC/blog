@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @user = User.includes(posts: [:comments]).find(params[:user_id])
     @posts = @user.posts
@@ -11,6 +12,13 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+  end
+
+  def destroy
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:id])
+    @post.destroy
+    redirect_to user_posts_path(@user)
   end
 
   def create

@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   def new
     @comment = Comment.new
   end
@@ -15,6 +16,14 @@ class CommentsController < ApplicationController
       redirect_to user_post_path(@comment.post.author_id, params[:comment][:post_id])
     end
   end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    # redirect_to previous url link or page if available
+    redirect_to request.referrer
+  end
+
 
   private
 

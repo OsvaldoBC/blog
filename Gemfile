@@ -12,6 +12,8 @@ gem 'devise'
 
 gem 'cancancan'
 
+gem 'load_and_authorize_resource'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 

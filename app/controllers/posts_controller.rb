@@ -16,9 +16,9 @@ class PostsController < ApplicationController
 
   def destroy
     @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:id])
+    #@post = @user.posts.find(params[:id])
     @post.destroy
-    redirect_to user_posts_path(@user)
+    redirect_to root_path, status: :see_other
   end
 
   def create

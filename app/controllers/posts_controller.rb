@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  load_and_authorize_resource
+  #load_and_authorize_resource except: :create
+  load_resource through: :current_user
   def index
     @user = User.includes(posts: [:comments]).find(params[:user_id])
     @posts = @user.posts

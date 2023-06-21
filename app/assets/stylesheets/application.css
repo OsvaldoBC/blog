@@ -158,6 +158,7 @@ a {
   padding: 30px;
   align-items: center;
 }
+
 .login-container {
   display: flex;
   flex-direction: column;
@@ -165,6 +166,7 @@ a {
   padding: 30px;
   align-items: center;
 }
+
 .login-container form .actions {
   display: flex;
 }

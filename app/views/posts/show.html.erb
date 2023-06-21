@@ -22,9 +22,7 @@
 <div class="post-comments">
   <% @post.comments.each do |comment| %>
     <%= render partial: 'shared/comment', locals: { comment: comment } %>
-    <% if can? :destroy , @post %>
-            <%= button_to 'Delete comment', user_post_comment_path(@user , @post , comment), method: :delete, class: "btn btn-dark" %>
-            <%end%>
+    
   <% end %>
 </div>
 <% if can? :destroy , @post %>

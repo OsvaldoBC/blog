@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  load_and_authorize_resource
+  
   def create
     like = Like.new(like_params)
     like.user = current_user

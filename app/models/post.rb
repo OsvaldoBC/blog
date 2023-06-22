@@ -15,7 +15,7 @@ class Post < ApplicationRecord
   end
 
   def decrement_post_counter
-    author.decrement!(:posts_counter)
+    user.decrement!(:posts_counter)
   end
 
   def recent_comments

@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-  
   def create
     like = Like.new(like_params)
     like.user = current_user

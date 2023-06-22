@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
- 
   def new
     @comment = Comment.new
   end
@@ -24,7 +23,6 @@ class CommentsController < ApplicationController
     # redirect_to previous url link or page if available
     redirect_to request.referrer
   end
-
 
   private
 

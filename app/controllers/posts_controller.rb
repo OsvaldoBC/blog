@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  #load_and_authorize_resource except: :create
+  # load_and_authorize_resource except: :create
   load_resource through: :current_user
   def index
     @user = User.includes(posts: [:comments]).find(params[:user_id])
@@ -16,8 +16,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-   # @user = User.find(params[:user_id])
-    #@post = @user.posts.find(params[:id])
+    # @user = User.find(params[:user_id])
+    # @post = @user.posts.find(params[:id])
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to root_path, status: :see_other

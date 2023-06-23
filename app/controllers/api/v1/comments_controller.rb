@@ -1,6 +1,7 @@
-class Api::V1::CommentsController < ApplicationController
+class Api::V1::CommentsController < ApiController
     def index
         @post = Post.find(params[:post_id])
+        @comments = @post.comments
         respond_to do |format|
             format.json { render json: @comments, status: 200 }
           end

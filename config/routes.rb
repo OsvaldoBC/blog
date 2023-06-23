@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   post 'comments/new', to: 'comments#create', as: 'create_comment'
   post 'likes/new', to: 'likes#create', as: 'create_like'
 
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
     post :auth, to: 'authentication#create'
     resources :users, only: [] do
